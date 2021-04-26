@@ -15,6 +15,9 @@ Features:
 - `Background GPS Enable/Disable Toggle`
   - `Background GPS Frequency Slider`
 
+Initial UI Mockup:
+![UI-Mockup-Main](https://imgur.com/a/R7EGSWw)
+
 Resources Used:
 - `Visual Studio`
 - `Xamarin`
