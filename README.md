@@ -16,6 +16,7 @@ Features:
   - `Background GPS Frequency Slider`
 
 Initial UI Mockup:
+
 ![UI-Mockup-Main](https://i.imgur.com/3Vwpy1J.png)
 
 Resources Used:
