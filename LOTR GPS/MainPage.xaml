@@ -8,10 +8,15 @@
             <Label Text="Geolocation Sample!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
 
-        <Button Text="Get Location" Clicked="Button_Clicked" />
-        <Button Text="Stop Getting Location" Clicked="Button_Clicked_1" />
+        <Button Text="Get Location" Clicked="Get_Location_Clicked" />
+        <Button Text="Stop Getting Location" Clicked="Halt_GPS" />
+
         <Label x:Name="resultLocation"  />
-        <Label x:Name="distanceTravelled"  />
+
+        <Label x:Name="distanceTravelledLabel"  />
+
+        <Label Text="Trip Progress" FontSize="Large" FontAttributes="Bold"/>
+        <ProgressBar x:Name="progressBar" ProgressColor="DarkBlue"  HeightRequest="30"/>
     </StackLayout>
 
 </ContentPage>
