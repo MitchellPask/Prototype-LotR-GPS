@@ -16,7 +16,12 @@
         <Label x:Name="distanceTravelledLabel"  />
 
         <Label Text="Trip Progress" FontSize="Large" FontAttributes="Bold"/>
+        <Label x:Name="tripPercentLabel"/>
+        <Label x:Name="tripDistanceLabel"/>
         <ProgressBar x:Name="progressBar" ProgressColor="DarkBlue"  HeightRequest="30"/>
+
+        <Label x:Name="sliderTitle" Text="GPS Accuracy: Default" FontSize="Large" FontAttributes="Bold"/>
+        <Slider x:Name="geoAccSlider" Maximum="4" Minimum="0" Value="2" ValueChanged="Slider_ValueChanged" />
     </StackLayout>
 
 </ContentPage>
