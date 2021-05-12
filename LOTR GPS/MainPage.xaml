@@ -2,31 +2,38 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LOTR_GPS.MainPage">
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="OrangeRed" Padding="24" CornerRadius="0">
+                <Label Text="Geolocation Sample!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Geolocation Sample!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
+            <Frame BackgroundColor="OrangeRed" Padding="15" Margin="15" CornerRadius="5">
+                <Image Source="LOTRMap"
+                        WidthRequest="{OnPlatform iOS='300', Android='350'}"
+                        HorizontalOptions="CenterAndExpand"   />
+            </Frame>
 
-        <Button Text="Get Location" Clicked="Get_Location_Clicked" />
-        <Button Text="Stop Getting Location" Clicked="Halt_GPS" />
+            <Button Text="Get Location" Clicked="Get_Location_Clicked" />
+            <Button Text="Stop Getting Location" Clicked="Halt_GPS" />
 
-        <Label x:Name="resultLocation"  />
+            <Label x:Name="resultLocation"  />
 
-        <Label x:Name="distanceTravelledLabel"  />
+            <Label x:Name="distanceTravelledLabel"  />
 
-        <Label Text="Trip Progress" FontSize="Large" FontAttributes="Bold"/>
-        <Label x:Name="tripPercentLabel"/>
-        <Label x:Name="tripDistanceLabel"/>
-        <ProgressBar x:Name="tripProgressBar" ProgressColor="OrangeRed"  HeightRequest="30"/>
+            <Label Text="Trip Progress" FontSize="Large" FontAttributes="Bold"/>
+            <Label x:Name="tripPercentLabel"/>
+            <Label x:Name="tripDistanceLabel"/>
+            <ProgressBar x:Name="tripProgressBar" ProgressColor="OrangeRed"  HeightRequest="30"/>
         
-        <Label Text="Journey Progress" FontSize="Large" FontAttributes="Bold"/>
-        <Label x:Name="journeyPercentLabel"/>
-        <Label x:Name="journeyDistanceLabel"/>
-        <ProgressBar x:Name="journeyProgressBar" ProgressColor="OrangeRed"  HeightRequest="30"/>
+            <Label Text="Journey Progress" FontSize="Large" FontAttributes="Bold"/>
+            <Label x:Name="journeyPercentLabel"/>
+            <Label x:Name="journeyDistanceLabel"/>
+            <ProgressBar x:Name="journeyProgressBar" ProgressColor="OrangeRed"  HeightRequest="30"/>
 
-        <Label x:Name="sliderTitle" Text="GPS Accuracy: Default" FontSize="Large" FontAttributes="Bold"/>
-        <Slider x:Name="geoAccSlider" Maximum="4" Minimum="0" Value="2" BackgroundColor="SlateGray" ValueChanged="Slider_ValueChanged" />
-    </StackLayout>
+            <Label x:Name="sliderTitle" Text="GPS Accuracy: Default" FontSize="Large" FontAttributes="Bold"/>
+            <Slider x:Name="geoAccSlider" Maximum="4" Minimum="0" Value="2" BackgroundColor="SlateGray" ValueChanged="Slider_ValueChanged" />
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>
